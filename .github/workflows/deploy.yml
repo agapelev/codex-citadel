@@ -3,7 +3,7 @@ name: Deploy Codex to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch: # Позволяет запустить вручную кнопку в Actions
+  workflow_dispatch:
 
 permissions:
   contents: read
