@@ -5,20 +5,29 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+	// --- ВАЖНЫЕ ДОБАВЛЕНИЯ ДЛЯ GITHUB PAGES ---
+	site: 'https://agapelev.github.io',
+	base: '/codex-citadel',
+	// ------------------------------------------
+
 	integrations: [
 		starlight({
-			title: 'Docs with Tailwind',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Codex Citadel', // Назовем его достойно
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/agapelev/codex-citadel' }
+			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'База Знаний',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Введение', slug: 'index' },
+						{ label: 'Быстрый старт', slug: 'guides/example' },
 					],
 				},
 				{
-					label: 'Reference',
+					label: 'Фреймворки',
+					// Это позволит папкам внутри src/content/docs/frameworks
+					// появляться в меню автоматически
 					autogenerate: { directory: 'reference' },
 				},
 			],
