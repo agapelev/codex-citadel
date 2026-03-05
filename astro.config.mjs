@@ -30,7 +30,7 @@ export default defineConfig({
 					label: "Том 1",
 			items: [
 				{ label: "01. Конфликт", autogenerate: { directory: "school/vol.1/01-conflict" } },
-			{ label: "02. Школа Христа", autogenerate: { directory: "school/VOL.1/02_school_of_christ" } },
+			{ label: "02. Школа Христа", autogenerate: { directory: "school/vol.1/02-school-of-christ" } },
 			{ label: "03. Личность Иисуса", autogenerate: { directory: "school/VOL.1/03_person_jesus" } },
 			{ label: "04. Всемогущая Кровь", autogenerate: { directory: "school/VOL.1/04_almighty_blood" } },
 			{ label: "05. Покаяние", autogenerate: { directory: "school/VOL.1/05-repentanse" } },
