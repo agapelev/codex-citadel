@@ -1,17 +1,106 @@
+/* 1. БАЗОВЫЕ СЛОИ И ИМПОРТЫ */
 @layer base, starlight, theme, components, utilities;
 
+/* Интеграция Starlight и Tailwind v4 */
 @import '@astrojs/starlight-tailwind';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+/* 2. НАСТРОЙКА ТЕМЫ (Tailwind v4 использует @theme) */
 @theme {
-	/*
-	Configure your Tailwind theme that will be used by Starlight.
-	https://starlight.astro.build/guides/css-and-tailwind/#styling-starlight-with-tailwind
-	*/
+	/* Мы не переопределяем стандартные цвета Starlight здесь,
+	 *    чтобы не нарушить его внутреннюю логику. Используем утилиты. */
 }
 
-/*
-Add additional Tailwind styles to this file:
-https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
-*/
+/* 3. КАСТОМНЫЕ АНИМАЦИИ И УТИЛИТЫ */
+@layer utilities {
+
+	/* --- АНИМАЦИИ --- */
+
+	/* А1. Плавное перетекание цветов (для заголовков) */
+	@keyframes fluid-colors {
+		0% {
+			color: #3b82f6; /* Акцентный синий (например, Blue 500) */
+			text-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+		}
+		50% {
+			color: #f59e0b; /* Янтарный (Amber 400) */
+			text-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+		}
+		100% {
+			color: #3b82f6;
+			text-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+		}
+	}
+
+	/* А2. "Дыхание" изображения (мягкий импульс и свечение) */
+	@keyframes image-breathe {
+		0%, 100% {
+			transform: scale(1);
+			filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
+		}
+		50% {
+			transform: scale(1.03);
+			filter: drop-shadow(0 0 40px rgba(245, 158, 11, 0.4));
+		}
+	}
+
+	/* А3. Плавное проявление (Fade In) для блоков */
+	@keyframes fade-in {
+		from { opacity: 0; transform: translateY(10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	/* А4. Мягкая пульсация текста (для важных цитат) */
+	@keyframes text-pulse {
+		0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+		50% { opacity: 0.85; text-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
+	}
+
+
+	/* --- КЛАССЫ АНИМАЦИИ --- */
+
+	/* Для "живого" текста (Заголовки) */
+	.animate-fluid-text {
+		animation: fluid-colors 8s ease-in-out infinite;
+		display: inline-block;
+	}
+
+	/* Для изображения в Hero (Мягкий импульс) */
+	.animate-image-breathe {
+		animation: image-breathe 10s ease-in-out infinite;
+		transition: transform 0.5s ease;
+	}
+
+	/* Для плавного появления блоков (применим к цитатам) */
+	.animate-fade-in-block {
+		animation: fade-in 1.5s ease-out forwards;
+		opacity: 0; /* Изначально скрыт */
+	}
+
+	/* Для пульсации важной цитаты */
+	.animate-important-text {
+		animation: text-pulse 4s ease-in-out infinite;
+	}
+
+
+	/* --- ДОПОЛНИТЕЛЬНЫЕ УТИЛИТЫ --- */
+
+	/* Фикс для CardGrid: одинаковая высота плиток */
+	.card-grid {
+		grid-auto-rows: 1fr;
+	}
+}
+
+/* 4. ГЛОБАЛЬНЫЕ НАСТРОЙКИ STARLIGHT */
+:root {
+	/* Пример настройки акцентного цвета Starlight, если Tailwind не перехватил */
+	/* --sl-color-accent: #3b82f6; */
+}
+
+/* Стилизация стандартных цитат (blockquote) Starlight в темной теме */
+:root[data-theme='dark'] blockquote {
+	border-left-color: #f59e0b; /* Янтарная линия слева */
+	background-color: rgba(245, 158, 11, 0.05); /* Очень тонкий янтарный фон */
+	color: #d1d5db; /* Светло-серый текст */
+}

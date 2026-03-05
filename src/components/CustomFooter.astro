@@ -1,0 +1,61 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+---
+
+<footer class="mt-20 border-t border-slate-800 bg-slate-900/80 rounded-t-[3rem] p-10 overflow-hidden relative not-prose">
+  <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 h-40 w-full max-w-4xl bg-accent-500/10 blur-[100px]"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+
+      <div class="space-y-4">
+        <h3 class="text-2xl font-black tracking-tight">
+          <span class="animate-fluid-text">Цитадель Духа</span>
+        </h3>
+        <p class="text-slate-300 italic text-sm leading-relaxed">
+          «Итак идите, научите все народы, крестя их во имя Отца и Сына и Святаго Духа...» (Мф. 28:19)
+        </p>
+        <div class="pt-4 flex gap-4">
+          <span class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 text-amber-500 shadow-sm shadow-amber-900/20">✝</span>
+          <span class="text-xs text-slate-400 font-medium leading-tight">Миссия «Shekinah»<br/>School of Christ Kazakhstan</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 text-left border-b border-slate-800 pb-1">Ресурсы</h4>
+          <ul class="space-y-2 text-sm list-none p-0 m-0 text-left">
+            <li><a href="https://shekinah-6sz.pages.dev/" target="_blank" rel="noopener noreferrer" class="text-amber-500/90 hover:text-amber-400 transition-colors no-underline font-medium">Миссия</a></li>
+            <li><a href="https://ai.dessyatykh.workers.dev/" target="_blank" rel="noopener noreferrer" class="text-amber-500/90 hover:text-amber-400 transition-colors no-underline font-medium">Апостолы ИИ</a></li>
+            <li><a href="https://journal-webarystan.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-amber-500/90 hover:text-amber-400 transition-colors no-underline font-medium">Дневники</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 text-left border-b border-slate-800 pb-1">Студия</h4>
+          <ul class="space-y-2 text-sm list-none p-0 m-0 text-left">
+            <li><a href="https://citadel-spirit.pages.dev/" target="_blank" rel="noopener noreferrer" class="text-amber-500/90 hover:text-amber-400 transition-colors no-underline font-medium">Web Arystan</a></li>
+            <li><a href="https://starlight.astro.build/" target="_blank" rel="noopener noreferrer" class="text-amber-500/90 hover:text-amber-400 transition-colors no-underline font-medium">Astro Docs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+        <h4 class="text-white font-bold mb-2">Связь с Цитаделью</h4>
+        <p class="text-xs text-slate-300 mb-4 font-medium">Присоединяйтесь к нашему служению в Казахстане и по всему миру.</p>
+        <a href="mailto:lev@webarystan.kz" class="block w-full text-center py-2.5 bg-accent-600 hover:bg-accent-500 text-white text-sm font-bold rounded-lg transition-all active:scale-95 no-underline shadow-lg shadow-accent-900/20">
+          Написать Льву Николаевичу
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-slate-800/60 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[10px] text-slate-400 font-medium uppercase tracking-[0.2em]">
+        © 2026 Web Development Studio «Web Arystan»
+      </p>
+      <div class="flex items-center gap-2 px-3 py-1 bg-slate-800/30 rounded-full border border-slate-700/30">
+        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-[10px] text-slate-400 font-mono tracking-tighter uppercase">Shielded by Cloudflare Pages</span>
+      </div>
+    </div>
+  </div>
+</footer>

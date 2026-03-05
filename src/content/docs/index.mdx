@@ -1,62 +1,106 @@
 ---
-title: Mission "Shekinah" & School of Christ Kazakhstan.
+title: «Цитадель Духа» - Mission «Shekinah» & School of Christ Kazakhstan.
 description: Школа Христа в Казахстане — продолжение служения Берта Кленденнена.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+template: splash
 hero:
   title: |
-    Shekinah Cloud
+    <span class="animate-fluid-text">Цитадель Духа</span>
     <span
       class="font-black text-transparent
         bg-clip-text bg-gradient-to-b
         from-accent-700 to-accent-400
         dark:from-accent-500 dark:to-accent-200"
     >
-      Mission
+      «Школы Христа»
     </span>
-  tagline: Добро пожаловать в Миссию "Shekinah" в Казахстане на основании Евангелия Иисуса Христа и школы  Берта Кленденнена «Международной Школа Христа»
+  tagline: Добро пожаловать в Миссию «Shekinah» в Казахстане. Основанной на Евангелии Иисуса Христа и школы Берта Кленденнена «Международная Школа Христа»
   image:
-     file: https://pub-eb64310187344c16be3fdbb9b74d75dc.r2.dev/img/ms-sock-3.webp
+      file: https://pub-eb64310187344c16be3fdbb9b74d75dc.r2.dev/img/ms-sock-3.webp
+      # Добавляем класс анимации прямо к изображению
+      class: animate-image-breathe
   actions:
-    - text: Учебный модуль Школы Христа
+    - text: Учебный модуль «Школы Христа»
       link: /guides/example/
       icon: right-arrow
     - text: Откройте документацию по миссии
-      link: https://starlight.astro.build
+      link: https://astro.build
+      attrs:
+        target: _blank
+        rel: noopener noreferrer
       icon: external
       variant: minimal
 ---
 
-## История Школы Христа
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-Школа Христа была основана служителем Божьим Бертом Кленденненом — человеком молитвы, поста и глубокого ученичества. Его видение заключалось в том, чтобы формировать служителей, способных жить в силе Святого Духа, побеждать плоть и быть сосудами Божьей славы. Сегодня эта школа действует в более чем 130 странах мира, преображая жизни и утверждая Царство Божье.
+## История «Школы Христа»
+
+<div class="animate-fade-in-block">
+> «Школа Христа» была основана служителем Божьим Бертом Кленденненом — человеком молитвы, поста и глубокого ученичества. Его видение заключалось в том, чтобы формировать служителей, способных жить в силе Святого Духа, побеждать плоть и быть сосудами Божьей славы. Сегодня эта школа действует в более чем 130 странах мира, преображая жизни и утверждая Царство Божье.
+</div>
 
 ## Миссия в Казахстане
 
-Я, Лев Николаевич, выпускник Международной Школы Христа (2002, Киргизия), с 1998 года служу Господу в Казахстане. За годы пасторского и миссионерского служения я видел, как маленькие группы верующих превращаются в зрелые церкви. Но всё это время в моём сердце жила мечта — чтобы Школа Христа была открыта и утверждена именно в Казахстане.
+<div class="animate-fade-in-block" style="animation-delay: 0.5s;">
+> Я, Лев Николаевич, выпускник Международной Школы Христа (2002, Киргизия), с 1998 года служу Господу в Казахстане. За годы пасторского и миссионерского служения я видел, как маленькие группы верующих превращаются в зрелые церкви. Но всё это время в моём сердце жила мечта — чтобы Школа Христа была открыта и утверждена именно в Казахстане.
+</div>
 
-Эта школа — не просто курс. Это духовное основание, которое может сформировать новое поколение служителей, живущих в истине, святости и силе. Я не стремлюсь присвоить славу Берта Кленденнена, но желаю быть продолжателем его миссии, свидетелем Христовым, действующим по водительству Святого Духа.
+<div class="mt-8 p-6 bg-slate-900 rounded-2xl border border-accent-900/50 animate-fade-in-block shadow-inner" style="animation-delay: 1s;">
+  <p class="text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-amber-200 to-accent-300 animate-important-text m-0 leading-relaxed">
+    Эта школа — не просто курс. Это духовное основание, которое может сформировать новое поколение служителей, живущих в истине, святости и силе. Я не стремлюсь присвоить славу Берта Кленденнена, но желаю быть продолжателем его миссии, свидетелем Христовым, действующим по водительству Святого Духа.
+  </p>
+</div>
 
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+## Посетите наши ресурсы
 
-## Next steps
-
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+<Card title="Shekinah Cloud Mission" icon="pencil">
+    Посетите <a href="https://shekinah-6sz.pages.dev/" target="_blank" rel="noopener noreferrer">Shekinah Cloud Mission</a> — основной ресурс Цитадели Духа.
+</Card>
+<Card title="Узнайте новости" icon="document">
+    Здесь <a href="https://shekinah-6sz.pages.dev/blog" target="_blank" rel="noopener noreferrer">Блог Миссии и Школы</a> — информация о жизни Миссии и Школы.
+</Card>
+<Card title="Журналы" icon="add-document">
+    Журналы на различные темы. <a href="https://journal-webarystan.vercel.app/" target="_blank" rel="noopener noreferrer">Ведите свои дневники</a> с поддержкой AI Gemini.
+</Card>
+<Card title="Собор мудрецов ИИ" icon="setting">
+    Здесь собраны <a href="https://ai.dessyatykh.workers.dev/" target="_blank" rel="noopener noreferrer">Апостолы ИИ</a> — 21 модель AI, наученные в Школе Христа.
+</Card>
+<Card title="Портал веб разработчика" icon="open-book">
+    Узнайте больше о нашей миссии в Интернете: <a href="https://citadel-spirit.pages.dev/" target="_blank" rel="noopener noreferrer">Web Development Studio «Web Arystan»</a>.
+</Card>
+<Card title="Read the docs" icon="open-book">
+    Learn more in <a href="https://starlight.astro.build/" target="_blank" rel="noopener noreferrer">the Starlight Docs</a>.
+</Card>
 </CardGrid>
+
+<div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-8 my-12 shadow-2xl">
+  <div class="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-accent-500/20 blur-[80px]"></div>
+  <div class="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-amber-500/10 blur-[80px]"></div>
+
+  <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
+        Миссия <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-amber-300">«Shekinah»</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-md italic">
+        «Где двое или трое собраны во имя Мое, там Я посреди них» (Мф. 18:20)
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://shekinah-6sz.pages.dev/" target="_blank" rel="noopener noreferrer"
+         class="px-6 py-3 bg-accent-600 hover:bg-accent-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-accent-900/20 active:scale-95 no-underline">
+        Вступить в Миссию
+      </a>
+      <a href="/guides/example/"
+         class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all active:scale-95 no-underline">
+        Начать обучение
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-8 h-1 w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent opacity-30"></div>
+</div>
